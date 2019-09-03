@@ -1,5 +1,5 @@
 # Preface
-## I. Aim of the specification
+## I. Aim of the Specification
 This specification is one of several related specifications. The single most important aim of all of these specifications is the provision of a common set of specifications for packaging digital information for archiving purposes. The specifications are based on common, international standards for transmitting, describing and preserving digital data. They have been produced to help data creators, software developers and digital archives to tackle the challenge of short-, medium- and long-term data management and reuse in a sustainable, authentic, cost-efficient, manageable and interoperable way.
 
 The foundation upon which the specifications are built is the Reference model for an Open Archival Information System (OAIS) (OAIS Reference model) which has Information Packages as its basis. Familiarity with the core functional entities of OAIS is a prerequisite for understanding the specifications.
@@ -10,19 +10,47 @@ A visualisation of the current specification network can be seen here:
 
 **Figure I:** Diagram showing E-ARK specification dependency hierarchy.
 
-| Specification | Aim and Goals  |
-|---------------|----------------|
-| Common Specification for Information Packages | This document introduces the concept of a Common Specification for Information Packages (CSIP). Its three main purposes are to: <ul><li>Establish a common understanding of the requirements which need to be met in order to achieve interoperability of Information Packages.</li><li>Establish a common base for the development of more specific Information Package definitions and tools within the digital preservation community.</li><li>Propose the details of an XML-based implementation of the requirements using, to the largest possible extent, standards which are widely used in international digital preservation. </li></ul>Ultimately the goal of the Common Specification is to reach a level of interoperability between all Information Packages so that tools implementing the Common Specification can be adopted by institutions without the need for further modifications or adaptations. |
-| E-ARK SIP | The main aims of this specification are to:<ul><li>Define a general structure for a Submission Information Package format suitable for a wide variety of archival scenarios, e.g. document and image collections, databases or geographical data.</li><li>Enhance interoperability between Producers and Archives.</li><li>Recommend best practices regarding metadata, content and structure of Submission Information Packages.</li></ul> |
-| E-ARK AIP | The main aims of this specification are to:<ul><li>Define a generic structure of the AIP format suitable for a wide variety of data types, such as document and image collections, archival records, databases or geographical data.</li><li>Recommend a set of metadata related to the structural and the preservation aspects of the AIP as implemented by the reference implementation (earkweb).</li><li>Ensure the format is suitable to store large quantities of data.</li></ul> |
-| E-ARK DIP | The main aims of this specification are to:<ul><li>Define a generic structure of the DIP format suitable for a wide variety of archival records, such as document and image collections, databases or geographical data.</li><li>Recommend a set of metadata related to the structural and access aspects of the DIP.</li></ul>  |
-| Content Information Type Specifications | The main aim and goal of a Content Information Type Specification is to:<ul><li>Define, in technical terms, how data and metadata must be formatted and placed within a CSIP Information Package in order to achieve interoperability in exchanging specific Content Information.</li></ul>The number of possible Content Information Type Specifications is unlimited. For at list of existing Content Information Type Specifications see, and read more about  Content Information Type Specifications in the Common Specification for Information Packages |
+### Overview of the E-ARK Specifications
 
-## II Organisational support
-This specification is maintained by the Digital Information LifeCycle Interoperability Standards Board (DILCIS Board, http://dilcis.eu/). The DILCIS Board was created to enhance and maintain the draft specifications developed in the European Archival Records and Knowledge Preservation Project (E-ARK project, http://eark-project.com/) which concluded in January 2017. The Board consists of eight members, but there is no restriction on the number of participants in the work. All Board documents and specifications are stored in GitHub (https://github.com/DILCISBoard) while published versions are made available on the Board webpage. Since 2018 the DILCIS Board has been responsible for the core specifications in the Connecting Europe Facility eArchiving Building Block https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving.
+#### Common Specification for Information Packages (E-ARK CSIP)
+This document introduces the concept of a Common Specification for Information Packages (CSIP). Its three main purposes are to:
 
-## III Authors
-A full list of contributors to this specification, as well as the revision history can be found in Appendix 1.
+- Establish a common understanding of the requirements which need to be met in order to achieve interoperability of Information Packages.
+- Establish a common base for the development of more specific Information Package definitions and tools within the digital preservation community.
+- Propose the details of an XML-based implementation of the requirements using, to the largest possible extent, standards which are widely used in international digital preservation.
+- Ultimately the goal of the Common Specification is to reach a level of interoperability between all Information Packages so that tools implementing the Common Specification can be adopted by institutions without the need for further modifications or adaptations.
+
+#### Specification for Submission Information Packages (E-ARK SIP)
+The main aims of this specification are to:
+
+- Define a general structure for a Submission Information Package format suitable for a wide variety of archival scenarios, e.g. document and image collections, databases or geographical data.
+- Enhance interoperability between Producers and Archives.
+- Recommend best practices regarding metadata, content and structure of Submission Information Packages.
+
+#### Specification for Archival Information Packages (E-ARK AIP)
+The main aims of this specification are to:
+
+- Define a generic structure of the AIP format suitable for a wide variety of data types, such as document and image collections, archival records, databases or geographical data.
+- Recommend a set of metadata related to the structural and the preservation aspects of the AIP as implemented by the reference implementation (earkweb).
+- Ensure the format is suitable to store large quantities of data.
+
+#### Specification for Dissemination Information Packages (E-ARK DIP)
+The main aims of this specification are to:
+
+- Define a generic structure of the DIP format suitable for a wide variety of archival records, such as document and image collections, databases or geographical data.
+- Recommend a set of metadata related to the structural and access aspects of the DIP.
+
+#### Content Information Type Specifications (E-ARK CITS)
+The main aims of a Content Information Type Specification are to:
+
+- Define, in technical terms, how data and metadata must be formatted and placed within a CSIP Information Package in order to achieve interoperability in exchanging specific Content Information.
+- The number of possible Content Information Type Specifications is unlimited. For at list of existing Content Information Type Specifications see, and read more about  Content Information Type Specifications in the Common Specification for Information Packages.
+
+## II. Organisational support
+This specification is maintained by the Digital Information LifeCycle Interoperability Standards Board (DILCIS Board, <http://dilcis.eu/>). The DILCIS Board was created to enhance and maintain the draft specifications developed in the European Archival Records and Knowledge Preservation Project (E-ARK project, <http://eark-project.com/>) which concluded in January 2017. The Board consists of eight members, but there is no restriction on the number of participants in the work. All Board documents and specifications are stored in GitHub (<https://github.com/DILCISBoard/>) while published versions are made available on the Board webpage. Since 2018 the DILCIS Board has been responsible for the core specifications in the Connecting Europe Facility eArchiving Building Block <https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving/>.
+
+## III. Authors & Revision History
+A full list of contributors to this specification, as well as the revision history can be found in the [Postface material](#postface).
 
 #  Introduction
 
@@ -99,10 +127,10 @@ The root of a METS document can contain a number of optional attributes, namespa
 
 The following table describes the differences in the `mets` element between the E-ARK SIP and the CSIP.
 
-|  ID  | Name & Loc | Description & usage | Card & Level |
-| ---- | ---------- | ------------------- | ------------ |
-| <a name="SIP1"></a>**SIP1** | **Package name** <br/> `mets/@LABEL` | An optional short text describing the contents of the package, e.g. "Accounting records of 2017". | **0..1** <br/> MAY |
-| <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` | The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
+|  ID     | Name, Location & Description | Card & Level |
+| ------- | ---------------------------- | ------------ |
+| <a name="SIP1"></a>**SIP1** | **Package name** <br/> `mets/@LABEL` <br/> An optional short text describing the contents of the package, e.g. "Accounting records of 2017". | **0..1** <br/> MAY |
+| <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` <br/> The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
 
 
 
@@ -111,34 +139,6 @@ The following table describes the differences in the `mets` element between the 
 ```xml
 <mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
 </mets:mets>
-```
-
-
-**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
-
-```xml
-<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
-  <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
-    <mets:name>The Swedish health agency</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
-  </mets:agent>
-  <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
-    <mets:name>The agency, Personnel</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
-  </mets:agent>
-  <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
-    <mets:name>Sven Svensson</mets:name>
-    <mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
-  </mets:agent>
-  <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
-    <mets:name>The archives</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
-  </mets:agent>
-  <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
-  <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
-  <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
-  <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
-</mets:metsHdr>
 ```
 
 
@@ -154,37 +154,37 @@ It is also in the `metsHdr` that the Submission Agreement to which a particular 
 The following table describes the differences in the `metsHdr` between an E-ARK SIP and the CSIP.
 
 
-|  ID  | Name & Loc | Description & usage | Card & Level |
-| ---- | ---------- | ------------------- | ------------ |
-| <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` | A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** <a href="#VocabularyRECORDSTATUS" >Package status</a> | **0..1** <br/> MAY |
-| <a name="SIP4"></a>**SIP4** | **OAIS Package type information** <br/> `metsHdr/@csip:OAISPACKAGETYPE` | `@csip:OAISPACKAGETYPE` is used with the value "SIP". <br/> **See also:** <a href="#VocabularyOAISPackageType" >OAIS Package type</a> | **1..1** <br/> MUST |
-| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altrecordID` | A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..1** <br/> MAY |
-| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altrecordID` | An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
-| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altrecordID` | An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..1** <br/> MAY |
-| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altrecordID` | In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
-| <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` | A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
-| <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` | The role of the person(s) or institution(s) responsible for the document/collection. | **1..1** <br/> MUST |
-| <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` | The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP12"></a>**SIP12** | **Archival creator agent name** <br/> `metsHdr/agent/name` | The name of the organisation(s) that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..*** <br/> MAY |
-| <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
-| <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` | The name of the organisation or person that submitting the package to the archive. | **1..1** <br/> MUST |
-| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the person(s) or institution(s) responsible for creating and/or submitting the package. | **1..1** <br/> MUST |
-| <a name="SIP17"></a>**SIP17** | **Submitting agent type** <br/> `metsHdr/agent/@TYPE` | The type of the submitting agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP18"></a>**SIP18** | **Submitting agent name** <br/> `metsHdr/agent/name` | Name of the organisation submitting the package to the archive. | **1..1** <br/> MAY |
-| <a name="SIP19"></a>**SIP19** | **Submitting agent additional information** <br/> `metsHdr/agent/note` | The submitting agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP20"></a>**SIP20** | **Classification of the submitting agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The submitting agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
-| <a name="SIP21"></a>**SIP21** | **Contact person agent** <br/> `metsHdr/agent` | Contact person for the submission. | **0..*** <br/> MAY |
-| <a name="SIP22"></a>**SIP22** | **Contact person agent role** <br/> `metsHdr/agent/@ROLE` | The role of the contact person is "CREATOR". | **1..1** <br/> MUST |
-| <a name="SIP23"></a>**SIP23** | **Contact person agent type** <br/> `metsHdr/agent/@TYPE` | The type of the contact person agent is "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP24"></a>**SIP24** | **Contact person agent name** <br/> `metsHdr/agent/name` | Name of the contact person. | **1..1** <br/> MUST |
-| <a name="SIP25"></a>**SIP25** | **Contact person agent additional information** <br/> `metsHdr/agent/note` | The submitting agent has one or more notes giving the contact information. | **0..*** <br/> MAY |
-| <a name="SIP26"></a>**SIP26** | **Preservation agent** <br/> `metsHdr/agent` | The organisation or person that preserves the package. | **0..1** <br/> MAY |
-| <a name="SIP27"></a>**SIP27** | **Preservation agent role** <br/> `metsHdr/agent/@ROLE` | The role of the preservation agent is "PRESERVATION". | **1..1** <br/> MUST |
-| <a name="SIP28"></a>**SIP28** | **Preservation agent type** <br/> `metsHdr/agent/@TYPE` | The type of the submitting agent is "ORGANIZATION". | **1..1** <br/> MUST |
-| <a name="SIP29"></a>**SIP29** | **Preservation agent name** <br/> `metsHdr/agent/name` | Name of the organisation preserving the package. | **1..1** <br/> MAY |
-| <a name="SIP30"></a>**SIP30** | **Preservation agent additional information** <br/> `metsHdr/agent/note` | The preservation agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
+|  ID     | Name, Location & Description | Card & Level |
+| ------- | ---------------------------- | ------------ |
+| <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` <br/> A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** [Package status](#VocabularyRECORDSTATUS) | **0..1** <br/> MAY |
+| <a name="SIP4"></a>**SIP4** | **OAIS Package type information** <br/> `metsHdr/@csip:OAISPACKAGETYPE` <br/> `@csip:OAISPACKAGETYPE` is used with the value "SIP". <br/> **See also:** [OAIS Package type](#VocabularyOAISPackageType) | **1..1** <br/> MUST |
+| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altrecordID` <br/> A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altrecordID` <br/> An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altrecordID` <br/> An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altrecordID` <br/> In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` <br/> A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
+| <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the person(s) or institution(s) responsible for the document/collection. | **1..1** <br/> MUST |
+| <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP12"></a>**SIP12** | **Archival creator agent name** <br/> `metsHdr/agent/name` <br/> The name of the organisation(s) that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..*** <br/> MAY |
+| <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` <br/> The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
+| <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` <br/> The name of the organisation or person that submitting the package to the archive. | **1..1** <br/> MUST |
+| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the person(s) or institution(s) responsible for creating and/or submitting the package. | **1..1** <br/> MUST |
+| <a name="SIP17"></a>**SIP17** | **Submitting agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the submitting agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP18"></a>**SIP18** | **Submitting agent name** <br/> `metsHdr/agent/name` <br/> Name of the organisation submitting the package to the archive. | **1..1** <br/> MAY |
+| <a name="SIP19"></a>**SIP19** | **Submitting agent additional information** <br/> `metsHdr/agent/note` <br/> The submitting agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP20"></a>**SIP20** | **Classification of the submitting agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The submitting agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
+| <a name="SIP21"></a>**SIP21** | **Contact person agent** <br/> `metsHdr/agent` <br/> Contact person for the submission. | **0..*** <br/> MAY |
+| <a name="SIP22"></a>**SIP22** | **Contact person agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the contact person is "CREATOR". | **1..1** <br/> MUST |
+| <a name="SIP23"></a>**SIP23** | **Contact person agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the contact person agent is "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP24"></a>**SIP24** | **Contact person agent name** <br/> `metsHdr/agent/name` <br/> Name of the contact person. | **1..1** <br/> MUST |
+| <a name="SIP25"></a>**SIP25** | **Contact person agent additional information** <br/> `metsHdr/agent/note` <br/> The submitting agent has one or more notes giving the contact information. | **0..*** <br/> MAY |
+| <a name="SIP26"></a>**SIP26** | **Preservation agent** <br/> `metsHdr/agent` <br/> The organisation or person that preserves the package. | **0..1** <br/> MAY |
+| <a name="SIP27"></a>**SIP27** | **Preservation agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the preservation agent is "PRESERVATION". | **1..1** <br/> MUST |
+| <a name="SIP28"></a>**SIP28** | **Preservation agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the submitting agent is "ORGANIZATION". | **1..1** <br/> MUST |
+| <a name="SIP29"></a>**SIP29** | **Preservation agent name** <br/> `metsHdr/agent/name` <br/> Name of the organisation preserving the package. | **1..1** <br/> MAY |
+| <a name="SIP30"></a>**SIP30** | **Preservation agent additional information** <br/> `metsHdr/agent/note` <br/> The preservation agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
 
 
 **Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
@@ -243,19 +243,19 @@ The main purpose of the METS file section is to serve as a "table of contents" o
 The following table describes the differences in the `fileSec` between an E-ARK SIP and the CSIP.
 
 
-|  ID  | Name & Loc | Description & usage | Card & Level |
-| ---- | ---------- | ------------------- | ------------ |
-| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` | An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package. <br/> Example: "Extensible Markup Language" <br/> Example: "PDF/A" <br/> Example: "ISO/IEC 26300:2006" | **0..1** <br/> MAY |
-| <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` | The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0" | **0..1** <br/> MAY |
-| <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` | The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM" | **0..1** <br/> MAY |
-| <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` | Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101" | **0..1** <br/> MAY |
+|  ID     | Name, Location & Description | Card & Level |
+| ------- | ---------------------------- | ------------ |
+| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` <br/> An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package. <br/> Example: "Extensible Markup Language" <br/> Example: "PDF/A" <br/> Example: "ISO/IEC 26300:2006" | **0..1** <br/> MAY |
+| <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` <br/> The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0" | **0..1** <br/> MAY |
+| <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` <br/> The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM" | **0..1** <br/> MAY |
+| <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` <br/> Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101" | **0..1** <br/> MAY |
 
 
 **Example:** METS example of an SIP with file information together with the info from CS IP.
 
 ```xml
 <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="Microsoft Word for Windows" FILEFORMATVERSION="2007 onwards" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/412">
-  <mets:FLocat LOCTYPE="URL" type="simple" href="Documentation/File.docx">
+  <mets:FLocat LOCTYPE="URL" type="simple" href="documentation/File.docx">
   </mets:FLocat>
 </mets:file>
 ```
@@ -398,7 +398,7 @@ The following list of semantic elements provide a starting point for anyone will
 **Example 1:** Example of a whole METS document describing an submission information package with no representations.
 
 ```xml
-<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd">
+<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd">
   <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
     <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <mets:name>RODA-in</mets:name>
@@ -442,11 +442,11 @@ The following list of semantic elements provide a starting point for anyone will
   <mets:fileSec ID="uuid-CA580D47-8C8B-4E91-ABD5-142EBBE15B84">
     <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86H" USE="Documentation">
       <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A81" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="Microsoft Word for Windows" FILEFORMATVERSION="2007 onwards" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/412">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="Documentation/File.docx">
+        <mets:FLocat LOCTYPE="URL" type="simple" href="documentation/File.docx">
         </mets:FLocat>
       </mets:file>
       <mets:file ID="uuid-0C0049CA-6DE0-4A6D-8699-7975E4046A82" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="2554366" CREATED="2012-08-15T12:08:15.432+01:00" CHECKSUM="91B7A2C0A1614AA8F3DAF11DB4A1C981F14BAA25E6A0336F715B7C513E7A1557" CHECKSUMTYPE="SHA-256" FILEFORMATNAME="Microsoft Word for Windows" FILEFORMATVERSION="2007 onwards" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/412">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="Documentation/File2.docx">
+        <mets:FLocat LOCTYPE="URL" type="simple" href="documentation/File2.docx">
         </mets:FLocat>
       </mets:file>
     </mets:fileGrp>
@@ -458,12 +458,12 @@ The following list of semantic elements provide a starting point for anyone will
     </mets:fileGrp>
     <mets:fileGrp ID="uuid-4ACDC6F3-8A36-4A00-A85F-84A56415E86G" USE="Representations/Submission/Data" CONTENTINFORMATIONTYPE="SIARDDK">
       <mets:file ID="uuid-EE23344D-4F64-40C1-8E18-75839EF661FD" MIMETYPE="application/xml" SIZE="1338744" CREATED="2018-04-24T14:37:49.617+01:00" CHECKSUM="7176A627870CFA3854468EC43C5A56F9BD8B30B50A983B8162BF56298A707667" CHECKSUMTYPE="SHA-256" ADMID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B3 uuid-9124DA4D-3736-4F69-8355-EB79A22E943F" FILEFORMATNAME="Extensible Markup Language" FILEFORMATVERSION="1.0" FORMATREGISTRY="PRONOM" FORMATREGISTRYKEY="fmt/101">
-        <mets:FLocat LOCTYPE="URL" type="simple" href="representations/Submission/Data/SIARD.xml">
+        <mets:FLocat LOCTYPE="URL" type="simple" href="representations/submission/data/SIARD.xml">
         </mets:FLocat>
       </mets:file>
     </mets:fileGrp>
   </mets:fileSec>
-  <mets:structMap ID="uuid-1465D250-0A24-4714-9555-5C1211722FB8" TYPE="PHYSICAL" LABEL="CSIP StructMap">
+  <mets:structMap ID="uuid-1465D250-0A24-4714-9555-5C1211722FB8" TYPE="PHYSICAL" LABEL="CSIP">
     <mets:div ID="uuid-638362BC-65D9-4DA7-9457-5156B3965A18" LABEL="uuid-4422c185-5407-4918-83b1-7abfa77de182">
       <mets:div ID="uuid-A4E1C5B6-CD9B-43EF-8F0C-3FD3AB688F81" LABEL="Metadata" ADMID="uuid-9124DA4D-3736-4F69-8355-EB79A22E943F uuid-48C18DD8-2561-4315-AC39-F941CBB138B3" DMDID="uuid-906F4F12-BA52-4779-AE2C-178F9206111F">
       </mets:div>
@@ -485,9 +485,12 @@ The following list of semantic elements provide a starting point for anyone will
 ## External Schema
 
 ### E-ARK SIP METS Extension
-**Location:**  <a href="https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd" >https://dilcis.eu/XML/METS/SIPExtensionMETS/SIPExtensionMETS.xsd</a> <br/> 
-**Context:** XML-schema for the attributes added by SIP <br/> 
-**Note:**   <br/> 
+**Location:** [https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd](https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd)   
+
+**Context:** XML-schema for the attributes added by SIP   
+
+**Note:**     
+
 An extension schema with the added attributes for use in this profile. <br/> 
 The schema is used with a namespace prefix of sip. <br/> 
 
@@ -495,85 +498,105 @@ The schema is used with a namespace prefix of sip. <br/>
 
 ### Package status
 <a name="VocabularyRECORDSTATUS"></a>
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in `@RECORDSTATUS` <br/> 
-**Description:**   <br/> 
-Describes the status of the package. <br/> 
 
+**Maintained By:** DILCIS Board   
+  
+**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+
+**Context:** Used in `@RECORDSTATUS`   
+  
+**Description:**     
+
+Describes the status of the package.  
+  
 
 ### Alternative record ID's
 <a name="VocabularyaltrecordIDTYPE"></a>
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in `altrecordID/@TYPE` <br/> 
-**Description:**   <br/> 
-Describes the type of the alternative record ID. <br/> 
 
+**Maintained By:** DILCIS Board   
+  
+**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+
+**Context:** Used in `altrecordID/@TYPE`   
+  
+**Description:**     
+
+Describes the type of the alternative record ID.  
+  
 
 ### Note type
 <a name="VocabularyNoteType"></a>
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earksip.dilcis.eu/schema/" >http://earksip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in `@csip:NOTETYPE` <br/> 
-**Description:**   <br/> 
-Describes the type of a note for an agent. <br/> 
 
+**Maintained By:** DILCIS Board   
+  
+**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+
+**Context:** Used in `@csip:NOTETYPE`   
+  
+**Description:**     
+
+Describes the type of a note for an agent.  
+  
 
 ### OAIS Package type
 <a name="VocabularyOAISPackageType"></a>
-**Maintained By:** DILCIS Board <br/> 
-**Location:**  <a href="http://earkcsip.dilcis.eu/schema/" >http://earkcsip.dilcis.eu/schema/</a> <br/> 
-**Context:** Used in @csip:OAISPACKAGETYPE <br/> 
-**Description:**   <br/> 
-Describes the OAIS type the package belongs to in the OAIS reference model. <br/> 
 
+**Maintained By:** DILCIS Board   
+  
+**Location:** [http://earkcsip.dilcis.eu/schema/](http://earkcsip.dilcis.eu/schema/)   
+
+**Context:** Used in @csip:OAISPACKAGETYPE   
+  
+**Description:**     
+
+Describes the OAIS type the package belongs to in the OAIS reference model.  
+  
 
 
 ## Appendix E: A Full List of E-ARK SIP Requirements
 
-|  ID  | Name & Loc | Description & usage | Card & Level |
-| ---- | ---------- | ------------------- | ------------ |
-| <a name="SIP1"></a>**SIP1** | **Package name** <br/> `mets/@LABEL` | An optional short text describing the contents of the package, e.g. "Accounting records of 2017". | **0..1** <br/> MAY |
-| <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` | The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
-| <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` | A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** <a href="#VocabularyRECORDSTATUS" >Package status</a> | **0..1** <br/> MAY |
-| <a name="SIP4"></a>**SIP4** | **OAIS Package type information** <br/> `metsHdr/@csip:OAISPACKAGETYPE` | `@csip:OAISPACKAGETYPE` is used with the value "SIP". <br/> **See also:** <a href="#VocabularyOAISPackageType" >OAIS Package type</a> | **1..1** <br/> MUST |
-| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altrecordID` | A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..1** <br/> MAY |
-| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altrecordID` | An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
-| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altrecordID` | An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..1** <br/> MAY |
-| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altrecordID` | In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** <a href="#VocabularyaltrecordIDTYPE" >Alternative record ID's</a> | **0..*** <br/> MAY |
-| <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` | A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
-| <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` | The role of the person(s) or institution(s) responsible for the document/collection. | **1..1** <br/> MUST |
-| <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` | The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP12"></a>**SIP12** | **Archival creator agent name** <br/> `metsHdr/agent/name` | The name of the organisation(s) that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..*** <br/> MAY |
-| <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` | The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
-| <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` | The name of the organisation or person that submitting the package to the archive. | **1..1** <br/> MUST |
-| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` | The role of the person(s) or institution(s) responsible for creating and/or submitting the package. | **1..1** <br/> MUST |
-| <a name="SIP17"></a>**SIP17** | **Submitting agent type** <br/> `metsHdr/agent/@TYPE` | The type of the submitting agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP18"></a>**SIP18** | **Submitting agent name** <br/> `metsHdr/agent/name` | Name of the organisation submitting the package to the archive. | **1..1** <br/> MAY |
-| <a name="SIP19"></a>**SIP19** | **Submitting agent additional information** <br/> `metsHdr/agent/note` | The submitting agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP20"></a>**SIP20** | **Classification of the submitting agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The submitting agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
-| <a name="SIP21"></a>**SIP21** | **Contact person agent** <br/> `metsHdr/agent` | Contact person for the submission. | **0..*** <br/> MAY |
-| <a name="SIP22"></a>**SIP22** | **Contact person agent role** <br/> `metsHdr/agent/@ROLE` | The role of the contact person is "CREATOR". | **1..1** <br/> MUST |
-| <a name="SIP23"></a>**SIP23** | **Contact person agent type** <br/> `metsHdr/agent/@TYPE` | The type of the contact person agent is "INDIVIDUAL". | **1..1** <br/> MUST |
-| <a name="SIP24"></a>**SIP24** | **Contact person agent name** <br/> `metsHdr/agent/name` | Name of the contact person. | **1..1** <br/> MUST |
-| <a name="SIP25"></a>**SIP25** | **Contact person agent additional information** <br/> `metsHdr/agent/note` | The submitting agent has one or more notes giving the contact information. | **0..*** <br/> MAY |
-| <a name="SIP26"></a>**SIP26** | **Preservation agent** <br/> `metsHdr/agent` | The organisation or person that preserves the package. | **0..1** <br/> MAY |
-| <a name="SIP27"></a>**SIP27** | **Preservation agent role** <br/> `metsHdr/agent/@ROLE` | The role of the preservation agent is "PRESERVATION". | **1..1** <br/> MUST |
-| <a name="SIP28"></a>**SIP28** | **Preservation agent type** <br/> `metsHdr/agent/@TYPE` | The type of the submitting agent is "ORGANIZATION". | **1..1** <br/> MUST |
-| <a name="SIP29"></a>**SIP29** | **Preservation agent name** <br/> `metsHdr/agent/name` | Name of the organisation preserving the package. | **1..1** <br/> MAY |
-| <a name="SIP30"></a>**SIP30** | **Preservation agent additional information** <br/> `metsHdr/agent/note` | The preservation agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
-| <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` | The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** <a href="#VocabularyNoteType" >Note type</a> | **1..1** <br/> MUST |
-| <a name="REF_CSIP_1"></a>**REF_CSIP_1** | **Descriptive metadata** <br/>  | The DIP dmdSec element should comply with  <br/>  dmdSec requirements in the CSIP profile. |  <br/> SHOULD |
-| <a name="REF_CSIP_2"></a>**REF_CSIP_2** | **Administrative metadata** <br/>  | The DIP amdSec element should comply with  <br/>  amdSec requirements in the CSIP profile. |  <br/> SHOULD |
-| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` | An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package. <br/> Example: "Extensible Markup Language" <br/> Example: "PDF/A" <br/> Example: "ISO/IEC 26300:2006" | **0..1** <br/> MAY |
-| <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` | The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0" | **0..1** <br/> MAY |
-| <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` | The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM" | **0..1** <br/> MAY |
-| <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` | Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101" | **0..1** <br/> MAY |
-| <a name="REF_CSIP_3"></a>**REF_CSIP_3** | **Structural description of the package** <br/>  | The DIP structMap element should comply with  <br/>  structMap requirements in the CSIP profile. |  <br/> SHOULD |
-| <a name="REF_METS_1"></a>**REF_METS_1** | **structLink** <br/>  | Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the structural links is found in the  <br/> METS Primer <br/> Information regarding the structural links is found in the  <br/> METS Primer |  <br/> MAY |
-| <a name="REF_METS_2"></a>**REF_METS_2** | **behaviorSec** <br/>  | Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the behavior section is found in the  <br/> METS Primer <br/> Information regarding the behavior section is found in the  <br/> METS Primer |  <br/> MAY |
+|  ID     | Name, Location & Description | Card & Level |
+| ------- | ---------------------------- | ------------ |
+| <a name="SIP1"></a>**SIP1** | **Package name** <br/> `mets/@LABEL` <br/> An optional short text describing the contents of the package, e.g. "Accounting records of 2017". | **0..1** <br/> MAY |
+| <a name="SIP2"></a>**SIP2** | **METS Profile** <br/> `mets/@PROFILE` <br/> The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml". | **1..1** <br/> MUST |
+| <a name="SIP3"></a>**SIP3** | **Package status** <br/> `metsHdr/@RECORDSTATUS` <br/> A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW. <br/> **See also:** [Package status](#VocabularyRECORDSTATUS) | **0..1** <br/> MAY |
+| <a name="SIP4"></a>**SIP4** | **OAIS Package type information** <br/> `metsHdr/@csip:OAISPACKAGETYPE` <br/> `@csip:OAISPACKAGETYPE` is used with the value "SIP". <br/> **See also:** [OAIS Package type](#VocabularyOAISPackageType) | **1..1** <br/> MUST |
+| <a name="SIP5"></a>**SIP5** | **Submission agreement** <br/> `metsHdr/altrecordID` <br/> A reference to the Submission Agreement associated with the package. <br/> `@TYPE` is used with the value "SUBMISSIONAGREEMENT". <br/> Example: RA 13-2011/5329; 2012-04-12 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP6"></a>**SIP6** | **Previous Submission agreement** <br/> `metsHdr/altrecordID` <br/> An optional reference to a previous submission agreement(s) which the information may have belonged to. <br/> `@TYPE` is used with the value "PREVIOUSSUBMISSIONAGREEMENT". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/ <br/> Note: It is recommended to use a machine-readable format for a better description of a submission agreement. <br/> For example, the submission agreement developed by Docuteam GmbH  <br/> http://www.loc.gov/standards/mets/profiles/00000041.xml <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP7"></a>**SIP7** | **Archival reference code** <br/> `metsHdr/altrecordID` <br/> An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS. <br/> `@TYPE` is used with the value "REFERENCECODE". <br/> Example: FM 12-2387/12726, 2007-09-19 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..1** <br/> MAY |
+| <a name="SIP8"></a>**SIP8** | **Previous archival reference code** <br/> `metsHdr/altrecordID` <br/> In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission. <br/> `@TYPE` is used with the value "PREVIOUSREFERENCECODE". <br/> Example: SE/FM/123/123.1/123.1.3 <br/> **See also:** [Alternative record ID's](#VocabularyaltrecordIDTYPE) | **0..*** <br/> MAY |
+| <a name="SIP9"></a>**SIP9** | **Archival creator agent** <br/> `metsHdr/agent` <br/> A wrapper element that enables to encode the name of the organisation or person that originally created the data being transferred. Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..1** <br/> MAY |
+| <a name="SIP10"></a>**SIP10** | **Archival creator agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the person(s) or institution(s) responsible for the document/collection. | **1..1** <br/> MUST |
+| <a name="SIP11"></a>**SIP11** | **Archival creator agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the archival creator agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP12"></a>**SIP12** | **Archival creator agent name** <br/> `metsHdr/agent/name` <br/> The name of the organisation(s) that originally created the data being transferred. <br/> Please note that this might be different from the organisation which has been charged with preparing and sending the SIP to the archives. | **0..*** <br/> MAY |
+| <a name="SIP13"></a>**SIP13** | **Archival creator agent additional information** <br/> `metsHdr/agent/note` <br/> The archival creator agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP14"></a>**SIP14** | **Classification of the archival creator agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The archival creator agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
+| <a name="SIP15"></a>**SIP15** | **Submitting agent** <br/> `metsHdr/agent` <br/> The name of the organisation or person that submitting the package to the archive. | **1..1** <br/> MUST |
+| <a name="SIP16"></a>**SIP16** | **Submitting agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the person(s) or institution(s) responsible for creating and/or submitting the package. | **1..1** <br/> MUST |
+| <a name="SIP17"></a>**SIP17** | **Submitting agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the submitting agent is "ORGANIZATION" or "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP18"></a>**SIP18** | **Submitting agent name** <br/> `metsHdr/agent/name` <br/> Name of the organisation submitting the package to the archive. | **1..1** <br/> MAY |
+| <a name="SIP19"></a>**SIP19** | **Submitting agent additional information** <br/> `metsHdr/agent/note` <br/> The submitting agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP20"></a>**SIP20** | **Classification of the submitting agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The submitting agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
+| <a name="SIP21"></a>**SIP21** | **Contact person agent** <br/> `metsHdr/agent` <br/> Contact person for the submission. | **0..*** <br/> MAY |
+| <a name="SIP22"></a>**SIP22** | **Contact person agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the contact person is "CREATOR". | **1..1** <br/> MUST |
+| <a name="SIP23"></a>**SIP23** | **Contact person agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the contact person agent is "INDIVIDUAL". | **1..1** <br/> MUST |
+| <a name="SIP24"></a>**SIP24** | **Contact person agent name** <br/> `metsHdr/agent/name` <br/> Name of the contact person. | **1..1** <br/> MUST |
+| <a name="SIP25"></a>**SIP25** | **Contact person agent additional information** <br/> `metsHdr/agent/note` <br/> The submitting agent has one or more notes giving the contact information. | **0..*** <br/> MAY |
+| <a name="SIP26"></a>**SIP26** | **Preservation agent** <br/> `metsHdr/agent` <br/> The organisation or person that preserves the package. | **0..1** <br/> MAY |
+| <a name="SIP27"></a>**SIP27** | **Preservation agent role** <br/> `metsHdr/agent/@ROLE` <br/> The role of the preservation agent is "PRESERVATION". | **1..1** <br/> MUST |
+| <a name="SIP28"></a>**SIP28** | **Preservation agent type** <br/> `metsHdr/agent/@TYPE` <br/> The type of the submitting agent is "ORGANIZATION". | **1..1** <br/> MUST |
+| <a name="SIP29"></a>**SIP29** | **Preservation agent name** <br/> `metsHdr/agent/name` <br/> Name of the organisation preserving the package. | **1..1** <br/> MAY |
+| <a name="SIP30"></a>**SIP30** | **Preservation agent additional information** <br/> `metsHdr/agent/note` <br/> The preservation agent has a note providing a unique identification code for the archival creator. | **0..1** <br/> MAY |
+| <a name="SIP31"></a>**SIP31** | **Classification of the preservation agent additional information** <br/> `metsHdr/agent/note/@csip:NOTETYPE` <br/> The preservation agent note is typed with the value of "IDENTIFICATIONCODE". <br/> **See also:** [Note type](#VocabularyNoteType) | **1..1** <br/> MUST |
+| <a name="REF_CSIP_1"></a>**REF_CSIP_1** | **Descriptive metadata** <br/>  <br/> The DIP dmdSec element should comply with  <br/>  dmdSec requirements in the CSIP profile. |  <br/> SHOULD |
+| <a name="REF_CSIP_2"></a>**REF_CSIP_2** | **Administrative metadata** <br/>  <br/> The DIP amdSec element should comply with  <br/>  amdSec requirements in the CSIP profile. |  <br/> SHOULD |
+| <a name="SIP32"></a>**SIP32** | **File format name** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATNAME` <br/> An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package. <br/> Example: "Extensible Markup Language" <br/> Example: "PDF/A" <br/> Example: "ISO/IEC 26300:2006" | **0..1** <br/> MAY |
+| <a name="SIP33"></a>**SIP33** | **File format version** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATVERSION` <br/> The version of the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "1.0" | **0..1** <br/> MAY |
+| <a name="SIP34"></a>**SIP34** | **File format registry** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATREGISTRY` <br/> The name of the format registry used to identify the file format when the use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "PRONOM" | **0..1** <br/> MAY |
+| <a name="SIP35"></a>**SIP35** | **File format registry key** <br/> `fileSec/fileGrp/file/@sip:FILEFORMATKEY` <br/> Key of the file format in the registry when use of PREMIS has not been agreed upon in the submission agreement. <br/> Example: "fmt/101" | **0..1** <br/> MAY |
+| <a name="REF_CSIP_3"></a>**REF_CSIP_3** | **Structural description of the package** <br/>  <br/> The DIP structMap element should comply with  <br/>  structMap requirements in the CSIP profile. |  <br/> SHOULD |
+| <a name="REF_METS_1"></a>**REF_METS_1** | **structLink** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the structural links is found in the  <br/> METS Primer <br/> Information regarding the structural links is found in the  <br/> METS Primer |  <br/> MAY |
+| <a name="REF_METS_2"></a>**REF_METS_2** | **behaviorSec** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the behavior section is found in the  <br/> METS Primer <br/> Information regarding the behavior section is found in the  <br/> METS Primer |  <br/> MAY |
 
 
 # Glossary
