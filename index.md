@@ -1,20 +1,11 @@
 ---
-title: E-ARK CSIP
-subtitle: Common Specification for Information Packages
+title: E-ARK SIP
+subtitle: Specification for Submission Information Packages
 abstract: |
-        This base profile describes the Common Specification for Information
-        Packages (CSIP) and the implementation of METS for packaging OAIS
-        conformant Information Packages. The profile is accompanied with a
-        textual document explaining the details of use of this profile.
-        This will enable repository interoperability and assist in the
-        management of the preservation of digital content.
-        This profile is a base profile which is extended with E-ARK
-        implementation of SIP, AIP and DIP. The profile can be used as is, but
-        it is recommended that the supplied extending implementation are used.
-        Alternatively, an own extension fulfilling the extending needs of the
-        implementer can be created.
+        This is the extension of the E-ARK CSIP profile for creation of an
+        E-ARK SIP.
 version: 2.0.1
-date: 15.07.2019
+date: 04.09.2019
 ---
 
 {{ page.subtitle }}
@@ -112,7 +103,7 @@ title: E-ARK Submission Information Package
 5.1.6\.  [Ingest](#ingest)  
 5.1.7\.  [Submission risks](#submissionrisks)  
 5.2\.  [Appendix B: E-ARK Information Package METS example](#appendixb:e-arkinformationpackagemetsexample)  
-5.3\.  [Appendix C: External Schema](#appendixc:externalschema)  
+5.3\.  [Appendix C: External Schema and Vocabularies](#appendixc:externalschemaandvocabularies)  
 5.4\.  [External Schema](#externalschema)  
 5.4.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
 5.5\.  [Controlled Vocabularies](#controlledvocabularies)  
@@ -535,11 +526,9 @@ The following list of semantic elements provide a starting point for anyone will
 	* **Risk Factor** - Meant for listing all risk factors (e.g. the designated community is not properly defined) of the submission.
 	* **Mitigation Option** - Meant for listing all mitigation options (e.g. define the designated community together with producers) for the risks.
 
-
 <a name="appendixb:e-arkinformationpackagemetsexample"></a>
 
 ## 5.2\. Appendix B: E-ARK Information Package METS example
-
 
 
 **Example 1:** Example of a whole METS document describing an submission information package with no representations.
@@ -626,10 +615,9 @@ The following list of semantic elements provide a starting point for anyone will
 ```
 
 
+<a name="appendixc:externalschemaandvocabularies"></a>
 
-<a name="appendixc:externalschema"></a>
-
-## 5.3\. Appendix C: External Schema
+## 5.3\. Appendix C: External Schema and Vocabularies
 
 <a name="externalschema"></a>
 
@@ -638,7 +626,7 @@ The following list of semantic elements provide a starting point for anyone will
 <a name="e-arksipmetsextension"></a>
 
 ### 5.4.1\. E-ARK SIP METS Extension
-**Location:** [https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd](https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd)   
+**Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP   
 
@@ -658,7 +646,7 @@ The schema is used with a namespace prefix of sip. <br/>
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml)   
 
 **Context:** Used in `@RECORDSTATUS`   
   
@@ -674,7 +662,7 @@ Describes the status of the package.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml)   
 
 **Context:** Used in `altrecordID/@TYPE`   
   
@@ -690,7 +678,7 @@ Describes the type of the alternative record ID.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/](http://earksip.dilcis.eu/schema/)   
+**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml)   
 
 **Context:** Used in `@csip:NOTETYPE`   
   
@@ -706,15 +694,14 @@ Describes the type of a note for an agent.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earkcsip.dilcis.eu/schema/](http://earkcsip.dilcis.eu/schema/)   
+**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml)   
 
-**Context:** Used in @csip:OAISPACKAGETYPE   
+**Context:** Used in `@csip:OAISPACKAGETYPE`   
   
 **Description:**     
 
 Describes the OAIS type the package belongs to in the OAIS reference model.  
   
-
 
 <a name="appendixe:afulllistofe-arksiprequirements"></a>
 
@@ -763,7 +750,6 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 | <a name="REF_METS_1"></a>**REF_METS_1** | **structLink** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the structural links is found in the  <br/> METS Primer <br/> Information regarding the structural links is found in the  <br/> METS Primer |  <br/> MAY |
 | <a name="REF_METS_2"></a>**REF_METS_2** | **behaviorSec** <br/>  <br/> Section not defined or used in CSIP, additional own uses may occur. <br/> Information regarding the behavior section is found in the  <br/> METS Primer <br/> Information regarding the behavior section is found in the  <br/> METS Primer |  <br/> MAY |
 
-
 <a name="glossary"></a>
 
 # 6\. Glossary
@@ -780,6 +766,7 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 | Producing organisation               | The organisational unit or individual that has the authority to transfer records to an archive. Usually the producer is also the records creator but this is not always the case, sometimes the producer is different from the records creator. For example: An author dies and her literary executor gains the authority to transfer her papers to an archive. The author is the records creator and the literary executor is the producer. For example: Department X gets reorganised out of existence and Department Y, which takes over the functional responsibilities of Department X, gains the authority to transfer the records of Department X to the archive. Department X is the records creator and Department Y is the producer. Counter example: The Department of Widget Science transfers some of its own records to the archive. The Department of Widget Science is the records creator and the producer. |
 | Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Submitting organisation              | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation.
+
 
 
 # Postface
@@ -844,3 +831,19 @@ II Revision History
 | 1.2          | 12.12.2016 | Tarvo Kärberg NAE | Incorporating agreements made in the Common Specification work group. |
 | 1.3          | 13.01.2017 | Tarvo Kärberg NAE | Small updates. |
 | 1.4          | 31.01.2017 | Tarvo Kärberg NAE | Finalising the specification. |
+
+
+III Acknowledgements
+----------------
+The Common Specification for Information Packages was first developed within the E-ARK project in 2014 – 2017. E-ARK was an EC-funded pilot action project in the Competiveness and Innovation Programme 2007- 2013, Grant Agreement no. 620998 under the Policy Support Programme.
+
+We would like to thank the National Archives of Sweden and Karin Bredenberg for their support and the availability of the Swedish national Common Specifications, upon which most of this document has been built.
+
+The authors of this deliverable would like to thank all national archives, tool developers and other stakeholders who provided valuable knowledge about their requirements for information packages and feedback to this specification!
+
+IV Contact & Feedback
+------------------
+The Common Specification for Information Packages is maintained by the Digital Information LifeCycle
+Interoperability Standard Board (DILCIS Board). For further information about the DILCIS Board or feedback
+on the current document please consult the website <http://www.dilcis.eu/> or contact us at
+<mailto:info@dilcis.eu>.
