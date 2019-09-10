@@ -2,10 +2,21 @@
 title: E-ARK SIP
 subtitle: Specification for Submission Information Packages
 abstract: |
-        This is the extension of the E-ARK CSIP profile for creation of an
-        E-ARK SIP.
+      This document constitutes a specification on how to produce and parse
+      E-ARK Submission Information Packages (SIP). The main objectives of this
+      specification are to define the general structure for a Submission
+      Information Package format in a way that it is suitable for a wide
+      variety of archival scenarios, e.g. document and image collections,
+      databases or geographical data, etc.; enhance interoperability between
+      Producers and Archives and recommend best practices regarding metadata,
+      content and structure of Submission Information Packages. The target
+      audience for this specification is records creators, archival
+      institutions and software providers that are responsible with preparing,
+      packaging, delivering and receiving packages of information to be archived
+      in an Open Archival Information System Reference Model (OAIS), i.e.
+      pre-ingest and ingest functional units.
 version: 2.0.1
-date: 04.09.2019
+date: 09.09.2019
 ---
 
 {{ page.subtitle }}
@@ -215,6 +226,34 @@ The following table describes the differences in the `mets` element between the 
 ```xml
 <mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
 </mets:mets>
+```
+
+
+**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
+
+```xml
+<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
+  <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+    <mets:name>The Swedish health agency</mets:name>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+    <mets:name>The agency, Personnel</mets:name>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
+    <mets:name>Sven Svensson</mets:name>
+    <mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
+    <mets:name>The archives</mets:name>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+  </mets:agent>
+  <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
+  <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
+  <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
+  <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
+</mets:metsHdr>
 ```
 
 
