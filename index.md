@@ -86,9 +86,6 @@ Version: {{ page.version }}
 
 Date: {{ page.date }}
 
----
-title: E-ARK Submission Information Package
----
 
 1\.  [Introduction](#introduction)  
 1.1\.  [Scope and purpose](#scopeandpurpose)  
@@ -737,18 +734,18 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 
 # 6\. Glossary
 
-| Term                                 | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Archival creator                     | An organisation unit or individual that creates records and/or manages records during their active use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Archive                              | An organisation that intends to preserve information for Access and (re)use by a Designated Community.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Delivering organisation              | The organisation delivering an information package to the archive. For stating and extending the information use of the “Producer organisation name” and “Submitting organisation name” elements is recommended.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ERMS                                 | A type of content management software known as an Electronic Records Management System.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Information Package                  | A logical container composed of optional Content Information and optional associated Preservation Description Information. Associated with this Information Package is Packaging Information used to delimit and identify the Content Information and Package Description information used to facilitate searches for the Content Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Ingest                               | The OAIS functional entity that contains the services and functions that accept Submission Information Packages from Producers, prepares Archival Information Packages for storage, and ensures that Archival Information Packages and their supporting Descriptive Information become established within the OAIS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| OAIS                                 | The Open Archival Information System is an archive (and a standard: ISO 14721:2003), consisting of an organisation of people and systems that has accepted the responsibility to preserve information and make it available for a Designated Community.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Producing organisation               | The organisational unit or individual that has the authority to transfer records to an archive. Usually the producer is also the records creator but this is not always the case, sometimes the producer is different from the records creator. For example: An author dies and her literary executor gains the authority to transfer her papers to an archive. The author is the records creator and the literary executor is the producer. For example: Department X gets reorganised out of existence and Department Y, which takes over the functional responsibilities of Department X, gains the authority to transfer the records of Department X to the archive. Department X is the records creator and Department Y is the producer. Counter example: The Department of Widget Science transfers some of its own records to the archive. The Department of Widget Science is the records creator and the producer. |
-| Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Submitting organisation              | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation.
+| Term    | Definition |
+| ------- | ---------- |
+| Archival creator | Organisation unit or individual that creates records and/or manages records during their active use. |
+| Archive          | An organisation that intends to preserve information for Access and (re)use by a Designated Community. |
+| Delivering organisation | The organisation delivering an information package to the archive. For stating and extending the information use of the “Producer organisation name” and “Submitting organisation name” elements is recommended.|
+| ERMS | A type of content management software known as an Electronic Records Management System. |
+| Information Package | A logical container composed of optional Content Information and optional associated Preservation Description Information. Associated with this Information Package is Packaging Information used to delimit and identify the Content Information and Package Description information used to facilitate searches for the Content Information. |
+| Ingest | The OAIS functional entity that contains the services and functions that accept Submission Information Packages from Producers, prepares Archival Information Packages for storage, and ensures that Archival Information Packages and their supporting Descriptive Information become established within the OAIS. |
+| OAIS | The Open Archival Information System is an archive (and a standard: ISO 14721:2003), consisting of an organisation of people and systems that has accepted the responsibility to preserve information and make it available for a Designated Community. |
+| Producing organisation  | The organisational unit or individual that has the authority to transfer records to an archive. Usually the producer is also the records creator but this is not always the case, sometimes the producer is different from the records creator. For example: An author dies and her literary executor gains the authority to transfer her papers to an archive. The author is the records creator and the literary executor is the producer. For example: Department X gets reorganised out of existence and Department Y, which takes over the functional responsibilities of Department X, gains the authority to transfer the records of Department X to the archive. Department X is the records creator and Department Y is the producer. Counter example: The Department of Widget Science transfers some of its own records to the archive. The Department of Widget Science is the records creator and the producer. |
+| Submission Information Package (SIP) | An Information Package that is delivered by the Producer to the OAIS for use in the construction or update of one or more AIPs and/or the associated Descriptive Information. |
+| Submitting organisation  | Name of the organisation submitting the package to the archive. Extends the delivery information since it may be the case that the content of a creator is held by another part of the organisation. |
 
 
 
@@ -779,41 +776,43 @@ I Authors
 II Revision History
 ----------------
 
-| Revision No. | Date       | Authors(s)                | Organisation | Description                                |
-| ------------ | ---------- | ------------------------- | ------------ | ------------------------------------------ |
-| 0.1          | 20.10.2014 | Tarvo Kärberg             | NAE          | First draft.                               |
-| 0.2          | 13.11.2014 | Tarvo Kärberg             | NAE          | Updating content. |
-| 0.3          | 02.12.2014 | Tarvo Kärberg             | NAE          | Updating content.   |
-| 0.4          | 17.01.2015 | Tarvo Kärberg             | NAE          | Updating content. |
-| 0.6          | 23.01.2015 | Anders Bo Nielsen         | DNA | Updating content. |
-| 0.5          | 21.01.2015 | Karin Bredenberg          | ESS | Updating content. |
-| 0.7          | 23.01.2015 | Kathrine Hougaard Edsen   | DNA Updating content. |
-| 0.71         | 26.01.2015 | Björn Skog                | ESS Updating content. |
-| 0.72         | 27.01.2015 | Hélder Silva              | KEEPS | Updating content. |
-| 0.8          | 27.01.2015 | Angela Dappert            | DLM/UPHEC Quality assurance and proof-reading. |
-| 0.9          | 29.01.2017 | Kuldar Aas                | NAE | Quality assurance and proof-reading. |
-| 0.91         | 30.01.2015 | David Anderson            | UPHEC | Quality assurance and proof-reading. |
-| 1.0          | 30.01.2015 | Tarvo Kärberg             | NAE | Final version (D3.2). |
-| 0.1          | 11.05.2015 | Karin Bredenberg          | ESS/NAS | Updating content. |
-| 0.3          | 27.07.2015 | Tarvo Kärberg             | NAE | Updating content. |
-| 0.2          | 30.06.2015 | Tarvo Kärberg             | NAE | Updating content. |
-| 0.4          | 23.10.2015 | Tarvo Kärberg             | NAE | Updating content, synchronising with the SMURF profile. |
-| 0.41         | 17.11.2015 | Tarvo Kärberg             | NAE | Integrating the feedback. |
-| 0.42         | 07.12.2015 | Tarvo Kärberg             | NAE | Updating content. |
-| 0.5          | 12.01.2016 | Tarvo Kärberg             | NAE | Updating content, synchronising with the Common Specification. |
-| 0.6          | 15.01.2016 | Anders Bo Nielsen         | DNA | Updating content. |
-| 0.61         | 15.01.2016 | Gregor Zavrsnik           | SNA | Updating content. |
-| 0.62         | 18.01.2016 | Tarvo Kärberg             | NAE | Updating content. |
-| 0.63         | 20.01.2016 | Phillip Mike Tømmerholt   | DNA | Updating content. |
-| 0.64         | 25.01.2016 | Phillip Mike Tømmerholt   | DNA | Updating content. |
-| 0.7          | 26.01.2016 | Sven Schlarb | AIT | Quality assurance and proof-reading. |
-| 0.8          | 27.01.2016 | Kuldar Aas | NAE | Quality assurance and proof-reading. |
-| 0.9          | 29.01.2016 | Andrew Wilson and David Anderson | University of Brighton | Quality assurance and proof-reading. |
-| 1.0          | 29.01.2016 | Tarvo Kärberg NAE | Final version (general paart of D3.3) |
-| 1.1          | 14.07.2016 | Tarvo Kärberg NAE | Incorporating agreements made in the Common Specification work group. |
-| 1.2          | 12.12.2016 | Tarvo Kärberg NAE | Incorporating agreements made in the Common Specification work group. |
-| 1.3          | 13.01.2017 | Tarvo Kärberg NAE | Small updates. |
-| 1.4          | 31.01.2017 | Tarvo Kärberg NAE | Finalising the specification. |
+| Revision | Date | Authors | Org | Description        |
+| -------- | ---- | ----- | --- | -------------------|
+| 0.1   | 20.10.2014 | Tarvo Kärberg | NAE | First draft.  |
+| 0.2   | 13.11.2014 | Tarvo Kärberg | NAE | Updating content. |
+| 0.3   | 02.12.2014 | Tarvo Kärberg | NAE | Updating content.   |
+| 0.4   | 17.01.2015 | Tarvo Kärberg | NAE | Updating content. |
+| 0.6   | 23.01.2015 | Anders Bo Nielsen | DNA | Updating content. |
+| 0.5   | 21.01.2015 | Karin Bredenberg | ESS | Updating content. |
+| 0.7   | 23.01.2015 | Kathrine Hougaard Edsen | DNA | Updating content. |
+| 0.71  | 26.01.2015 | Björn Skog | ESS | Updating content. |
+| 0.72  | 27.01.2015 | Hélder Silva | KEEPS | Updating content. |
+| 0.8   | 27.01.2015 | Angela Dappert | DLM/UPHEC | Quality assurance and proof-reading. |
+| 0.9   | 29.01.2017 | Kuldar Aas | NAE | Quality assurance and proof-reading. |
+| 0.91  | 30.01.2015 | David Anderson | UPHEC | Quality assurance and proof-reading. |
+| 1.0   | 30.01.2015 | Tarvo Kärberg | NAE | Final version (D3.2). |
+| 0.1   | 11.05.2015 | Karin Bredenberg | ESS/NAS | Updating content. |
+| 0.3   | 27.07.2015 | Tarvo Kärberg | NAE | Updating content. |
+| 0.2   | 30.06.2015 | Tarvo Kärberg | NAE | Updating content. |
+| 0.4   | 23.10.2015 | Tarvo Kärberg | NAE | Updating content, synchronising with the SMURF profile. |
+| 0.41  | 17.11.2015 | Tarvo Kärberg | NAE | Integrating the feedback. |
+| 0.42  | 07.12.2015 | Tarvo Kärberg | NAE | Updating content. |
+| 0.5   | 12.01.2016 | Tarvo Kärberg | NAE | Updating content, synchronising with the Common Specification. |
+| 0.6   | 15.01.2016 | Anders Bo Nielsen | DNA | Updating content. |
+| 0.61  | 15.01.2016 | Gregor Zavrsnik | SNA | Updating content. |
+| 0.62  | 18.01.2016 | Tarvo Kärberg | NAE | Updating content. |
+| 0.63  | 20.01.2016 | Phillip Mike Tømmerholt | DNA | Updating content. |
+| 0.64  | 25.01.2016 | Phillip Mike Tømmerholt | DNA | Updating content. |
+| 0.7   | 26.01.2016 | Sven Schlarb | AIT | Quality assurance and proof-reading. |
+| 0.8   | 27.01.2016 | Kuldar Aas | NAE | Quality assurance and proof-reading. |
+| 0.9   | 29.01.2016 | Andrew Wilson and David Anderson | University of Brighton | Quality assurance and proof-reading. |
+| 1.0   | 29.01.2016 | Tarvo Kärberg | NAE | Final version (general paart of D3.3) |
+| 1.1   | 14.07.2016 | Tarvo Kärberg | NAE | Incorporating agreements made in the Common Specification work group. |
+| 1.2   | 12.12.2016 | Tarvo Kärberg | NAE | Incorporating agreements made in the Common Specification work group. |
+| 1.3   | 13.01.2017 | Tarvo Kärberg | NAE | Small updates. |
+| 1.4   | 31.01.2017 | Tarvo Kärberg | NAE | Finalising the specification. |
+| 2.0.0 | 15.03.2019 | Miguel Ferreira | KEEPS | Updated to v2.0 with CSIP |
+| 2.0.1 | 09.09.2019 | Karin Bredenberg | ESS | Correction @LABEL and @USE attributes, typos, layout and PDF formatting. |
 
 
 III Acknowledgements
