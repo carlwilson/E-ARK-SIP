@@ -111,15 +111,14 @@ Date: {{ page.date }}
 5.1.6\.  [Ingest](#ingest)  
 5.1.7\.  [Submission risks](#submissionrisks)  
 5.2\.  [Appendix B: E-ARK Information Package METS example](#appendixb:e-arkinformationpackagemetsexample)  
-5.3\.  [Appendix C: External Schema and Vocabularies](#appendixc:externalschemaandvocabularies)  
-5.4\.  [External Schema](#externalschema)  
-5.4.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
-5.5\.  [Controlled Vocabularies](#controlledvocabularies)  
-5.5.1\.  [Package status](#packagestatus)  
-5.5.2\.  [Alternative record ID's](#alternativerecordid's)  
-5.5.3\.  [Note type](#notetype)  
-5.5.4\.  [OAIS Package type](#oaispackagetype)  
-5.6\.  [Appendix E: A Full List of E-ARK SIP Requirements](#appendixe:afulllistofe-arksiprequirements)  
+5.3\.  [Appendix C: External Schema](#appendixc:externalschema)  
+5.3.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
+5.4\.  [Appendix D: External Vocabularies](#appendixd:externalvocabularies)  
+5.4.1\.  [Package status](#packagestatus)  
+5.4.2\.  [Alternative record ID's](#alternativerecordid's)  
+5.4.3\.  [Note type](#notetype)  
+5.4.4\.  [OAIS Package type](#oaispackagetype)  
+5.5\.  [Appendix E: A Full List of E-ARK SIP Requirements](#appendixe:afulllistofe-arksiprequirements)  
 6\.  [Glossary](#glossary)  
 
 <a name="introduction"></a>
@@ -223,34 +222,6 @@ The following table describes the differences in the `mets` element between the 
 ```xml
 <mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
 </mets:mets>
-```
-
-
-**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
-
-```xml
-<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
-  <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
-    <mets:name>The Swedish health agency</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
-  </mets:agent>
-  <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
-    <mets:name>The agency, Personnel</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
-  </mets:agent>
-  <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
-    <mets:name>Sven Svensson</mets:name>
-    <mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
-  </mets:agent>
-  <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
-    <mets:name>The archives</mets:name>
-    <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
-  </mets:agent>
-  <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
-  <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
-  <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
-  <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
-</mets:metsHdr>
 ```
 
 
@@ -623,17 +594,15 @@ The following list of semantic elements provide a starting point for anyone will
 ```
 
 
-<a name="appendixc:externalschemaandvocabularies"></a>
+<a name="appendixc:externalschema"></a>
 
-## 5.3\. Appendix C: External Schema and Vocabularies
+## 5.3\. Appendix C: External Schema
 
-<a name="externalschema"></a>
 
-## 5.4\. External Schema
 
 <a name="e-arksipmetsextension"></a>
 
-### 5.4.1\. E-ARK SIP METS Extension
+### 5.3.1\. E-ARK SIP METS Extension
 **Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP   
@@ -643,13 +612,15 @@ The following list of semantic elements provide a starting point for anyone will
 An extension schema with the added attributes for use in this profile. <br/> 
 The schema is used with a namespace prefix of sip. <br/> 
 
-<a name="controlledvocabularies"></a>
 
-## 5.5\. Controlled Vocabularies
+<a name="appendixd:externalvocabularies"></a>
+
+## 5.4\. Appendix D: External Vocabularies
+
 
 <a name="packagestatus"></a>
 
-### 5.5.1\. Package status
+### 5.4.1\. Package status
 <a name="VocabularyRECORDSTATUS"></a>
 
 **Maintained By:** DILCIS Board   
@@ -665,7 +636,7 @@ Describes the status of the package.
 
 <a name="alternativerecordid's"></a>
 
-### 5.5.2\. Alternative record ID's
+### 5.4.2\. Alternative record ID's
 <a name="VocabularyaltrecordIDTYPE"></a>
 
 **Maintained By:** DILCIS Board   
@@ -681,7 +652,7 @@ Describes the type of the alternative record ID.
 
 <a name="notetype"></a>
 
-### 5.5.3\. Note type
+### 5.4.3\. Note type
 <a name="VocabularyNoteType"></a>
 
 **Maintained By:** DILCIS Board   
@@ -697,7 +668,7 @@ Describes the type of a note for an agent.
 
 <a name="oaispackagetype"></a>
 
-### 5.5.4\. OAIS Package type
+### 5.4.4\. OAIS Package type
 <a name="VocabularyOAISPackageType"></a>
 
 **Maintained By:** DILCIS Board   
@@ -713,7 +684,7 @@ Describes the OAIS type the package belongs to in the OAIS reference model.
 
 <a name="appendixe:afulllistofe-arksiprequirements"></a>
 
-## 5.6\. Appendix E: A Full List of E-ARK SIP Requirements
+## 5.5\. Appendix E: A Full List of E-ARK SIP Requirements
 
 |  ID     | Name, Location & Description | Card & Level |
 | ------- | ---------------------------- | ------------ |
