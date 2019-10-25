@@ -15,8 +15,8 @@ abstract: |
       packaging, delivering and receiving packages of information to be archived
       in an Open Archival Information System Reference Model (OAIS), i.e.
       pre-ingest and ingest functional units.
-version: 2.0.1
-date: 09.09.2019
+version: 2.0.2
+date: 28.10.2019
 ---
 
 {{ page.subtitle }}
@@ -113,6 +113,7 @@ Date: {{ page.date }}
 5.2\.  [Appendix B: E-ARK Information Package METS example](#appendixb:e-arkinformationpackagemetsexample)  
 5.3\.  [Appendix C: External Schema](#appendixc:externalschema)  
 5.3.1\.  [E-ARK SIP METS Extension](#e-arksipmetsextension)  
+5.3.2\.  [E-ARK CSIP METS Extension](#e-arkcsipmetsextension)  
 5.4\.  [Appendix D: External Vocabularies](#appendixd:externalvocabularies)  
 5.4.1\.  [Package status](#packagestatus)  
 5.4.2\.  [Alternative record ID's](#alternativerecordid's)  
@@ -220,8 +221,36 @@ The following table describes the differences in the `mets` element between the 
 **Example:** METS root element example with values from E-ARK-SIP as well as CS IP.
 
 ```xml
-<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd">
+<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
 </mets:mets>
+```
+
+
+**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
+
+```xml
+<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
+  <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+    <mets:name>The Swedish health agency</mets:name>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+    <mets:name>The agency, Personnel</mets:name>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
+    <mets:name>Sven Svensson</mets:name>
+    <mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
+    <mets:name>The archives</mets:name>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+  </mets:agent>
+  <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
+  <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
+  <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
+  <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
+</mets:metsHdr>
 ```
 
 
@@ -513,7 +542,7 @@ The following list of semantic elements provide a starting point for anyone will
 **Example 1:** Example of a whole METS document describing an submission information package with no representations.
 
 ```xml
-<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://dilcis.eu/XML/METS/CSIPExtensionMETS/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://dilcis.eu/XML/METS/SIPExtensionMETS/DILCISExtensionSIPMETS.xsd">
+<mets:mets OBJID="uuid-4422c185-5407-4918-83b1-7abfa77de182" LABEL="Accounting records of 2017" TYPE="OTHER" OTHERTYPE="Accounting" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml" schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://dilcis.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://dilcis.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd">
   <mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
     <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <mets:name>RODA-in</mets:name>
@@ -603,7 +632,7 @@ The following list of semantic elements provide a starting point for anyone will
 <a name="e-arksipmetsextension"></a>
 
 ### 5.3.1\. E-ARK SIP METS Extension
-**Location:** [http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](http://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
+**Location:** [https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd](https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd)   
 
 **Context:** XML-schema for the attributes added by SIP   
 
@@ -611,6 +640,19 @@ The following list of semantic elements provide a starting point for anyone will
 
 An extension schema with the added attributes for use in this profile. <br/> 
 The schema is used with a namespace prefix of sip. <br/> 
+
+
+<a name="e-arkcsipmetsextension"></a>
+
+### 5.3.2\. E-ARK CSIP METS Extension
+**Location:** [http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd](http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd)   
+
+**Context:** XML-schema for the attributes added by CSIP   
+
+**Note:**     
+
+An extension schema with the added attributes for use in this profile. <br/> 
+The schema is identified using the namespace prefix csip. <br/> 
 
 
 <a name="appendixd:externalvocabularies"></a>
@@ -756,6 +798,17 @@ I Authors
 
 | Name                             | Organisation                                       |
 | -------------------------------- | -------------------------------------------------- |
+| Miguel Ferreira                  | Keep Solutions (KEEPS)                             |
+| Hélder Silva                     | Keep Solutions (KEEPS)                             |
+| Karin Bredenberg                 | Swedish National Archives (NAS)                    |
+| Carl Wilson                      | Open Preservation Foundation                       |
+| Jaime Kaminski (reviewer)        | Highbury Associates                                |
+| Luís Miguel Ferros (reviewer)    | Keep Solutions (KEEPS)                             |
+
+### I.I. Contributors to previous version
+
+| Name                             | Organisation                                       |
+| -------------------------------- | -------------------------------------------------- |
 | Tarvo Kärberg                    | Estonian National Archives (NAE)                   |    
 | Anders Bo Nielsen                | Danish National Archives (DNA)                     |
 | Björn Skog                       | ES Solutions (ESS)                                 |
@@ -812,6 +865,7 @@ II Revision History
 | 1.4   | 31.01.2017 | Tarvo Kärberg | NAE | Finalising the specification. |
 | 2.0.0 | 15.03.2019 | Miguel Ferreira | KEEPS | Updated to v2.0 with CSIP |
 | 2.0.1 | 09.09.2019 | Karin Bredenberg | SNA | Correction @LABEL and @USE attributes, typos, layout and PDF formatting. |
+| 2.0.2 | 28.10.2019 | Karin Bredenberg | SYD | Fixed schema paths. |
 
 
 III Acknowledgements
