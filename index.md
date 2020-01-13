@@ -15,8 +15,8 @@ abstract: |
       packaging, delivering and receiving packages of information to be archived
       in an Open Archival Information System Reference Model (OAIS), i.e.
       pre-ingest and ingest functional units.
-version: 2.0.2
-date: 28.10.2019
+version: 2.0.3
+date: 08.01.2020
 ---
 
 {{ page.subtitle }}
@@ -226,6 +226,34 @@ The following table describes the differences in the `mets` element between the 
 ```
 
 
+**Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
+
+```xml
+<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
+  <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+    <mets:name>The Swedish health agency</mets:name>
+    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+    <mets:name>The agency, Personnel</mets:name>
+    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
+    <mets:name>Sven Svensson</mets:name>
+    <mets:note>Phone: 08-123456, Email: sven.svensson@mail.mail</mets:note>
+  </mets:agent>
+  <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
+    <mets:name>The archives</mets:name>
+    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+  </mets:agent>
+  <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
+  <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
+  <mets:altrecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altrecordID>
+  <mets:altrecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altrecordID>
+</mets:metsHdr>
+```
+
+
 <a name="extendeduseofthemetsheaderelement`metshdr`"></a>
 
 ## 3.2\. Extended use of the METS header (element `metsHdr`)
@@ -276,14 +304,14 @@ The following table describes the differences in the `metsHdr` between an E-ARK 
 **Example:** METS example of altrecordID's, and SIP agents following the SIP profile as well as CS IP.
 
 ```xml
-<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP">
+<mets:metsHdr CREATEDATE="2018-04-24T14:37:49.602+01:00" LASTMODDATE="2018-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" OAISPACKAGETYPE="SIP">
   <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
     <mets:name>The Swedish health agency</mets:name>
-    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE201345098701</mets:note>
   </mets:agent>
   <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
     <mets:name>The agency, Personnel</mets:name>
-    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">VAT:SE2098109810-AF87</mets:note>
   </mets:agent>
   <mets:agent ROLE="OTHER" TYPE="INDIVIDUAL" OTHERROLE="SUBMITTER">
     <mets:name>Sven Svensson</mets:name>
@@ -291,7 +319,7 @@ The following table describes the differences in the `metsHdr` between an E-ARK 
   </mets:agent>
   <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
     <mets:name>The archives</mets:name>
-    <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+    <mets:note NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
   </mets:agent>
   <mets:altrecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.kb.se/dnr331-1144-2011/20120711/</mets:altrecordID>
   <mets:altrecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">FM 12-2387/12726, 2007-09-19</mets:altrecordID>
@@ -671,7 +699,7 @@ Describes the type of the alternative record ID.
 
 **Maintained By:** DILCIS Board   
   
-**Location:** [http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml](http://earksip.dilcis.eu/schema/SIPVocabularyNoteType.xml)   
+**Location:** [http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml](http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml)   
 
 **Context:** Used in `@csip:NOTETYPE`   
   
